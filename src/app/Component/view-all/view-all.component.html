@@ -1,0 +1,55 @@
+<p>view-all works!</p>
+<!-- {{all|json}}  -->
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Full Details</th>
+            <th>Action Button</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of all">
+            <td>
+                Catagory Name : {{p.name}}
+                <div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>productID</th>
+                                <th>name</th>
+                                <th>productNumber</th>
+                                <th>color</th>
+                                <th>standardCost</th>
+                                <th>listPrice</th>
+                                <th>size</th>
+                                <th>weight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cp of p.products">
+                                <td>{{cp.productID}}</td>
+                                <td>{{cp.name}}</td>
+                                <td>{{cp.productNumber}}</td>
+                                <td>{{cp.color}}</td>
+                                <td>{{cp.standardCost}}</td>
+                                <td>{{cp.listPrice}}</td>
+                                <td>{{cp.size}}</td>
+                                <td>{{cp.weight}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </td>
+            <td>
+                <button routerLink="/view/edit/{{p.productCategoryID}}" class="btn btn-primary">Edit</button>
+                <button (click)="dele(p.productCategoryID)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+

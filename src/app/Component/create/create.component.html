@@ -1,0 +1,95 @@
+<p>create works!</p>
+
+
+<!-- {{pro | json}}
+
+<hr>
+
+{{tempPro | json}}
+
+<hr> -->
+
+<div>
+    <div class="row">
+        <h2>Catagory</h2>
+        <label for="name" class="form-label">Catagory</label>
+        <input type="text" name="name" id="" class="form-control" [(ngModel)]="pro.name">
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-3">
+            <h2>Product</h2>
+            <div>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="" class="form-control" [(ngModel)]="tempPro.name">
+            </div>
+            <div>
+                <label for="name" class="form-label">productNumber</label>
+                <input type="text" name="name" id="" class="form-control" [(ngModel)]="tempPro.productNumber">
+            </div>
+            <div>
+                <label for="name" class="form-label">color</label>
+                <input type="text" name="name" id="" class="form-control" [(ngModel)]="tempPro.color">
+            </div>
+            <div>
+                <label for="name" class="form-label">standardCost</label>
+                <input type="number" name="name" id="" class="form-control" [(ngModel)]="tempPro.standardCost">
+            </div>
+            <div>
+                <label for="name" class="form-label">listPrice</label>
+                <input type="number" name="name" id="" class="form-control" [(ngModel)]="tempPro.listPrice">
+            </div>
+            <div>
+                <label for="name" class="form-label">size</label>
+                <input type="number" name="name" id="" class="form-control" [(ngModel)]="tempPro.size">
+            </div>
+            <div>
+                <label for="name" class="form-label">weight</label>
+                <input type="number" name="name" id="" class="form-control" [(ngModel)]="tempPro.weight">
+            </div>
+            <div>
+                <Button (click)="addProd()" class="btn btn-primary col-md-12 mt-4">Add Product to list</Button>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <h2>Product List</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        
+                        <th>name</th>
+                        <th>productNumber</th>
+                        <th>color</th>
+                        <th>standardCost</th>
+                        <th>listPrice</th>
+                        <th>size</th>
+                        <th>weight</th>
+                        <th>Action</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cp of pro.products">
+                        
+                        <td>{{cp.name}}</td>
+                        <td>{{cp.productNumber}}</td>
+                        <td>{{cp.color}}</td>
+                        <td>{{cp.standardCost}}</td>
+                        <td>{{cp.listPrice}}</td>
+                        <td>{{cp.size}}</td>
+                        <td>{{cp.weight}}</td>
+                        <td>
+                            <button (click)="edi(cp)" class="btn btn-primary">Edit</button>
+                        </td>
+                        <td>
+                           
+                            <button (click)="dele(cp)" class="btn btn-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <button (click)="addpc()" class="btn btn-secondary mt-4">ADD Product With Catagory</button>
+    </div>
+</div>

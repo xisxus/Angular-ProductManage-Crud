@@ -1,0 +1,84 @@
+.image-container {
+    position: relative;
+    width: 100%; /* Makes the container take up full width */
+   
+    /* Center the container */
+  }
+  
+  .top-button {
+    position: absolute;
+    top: 76%; /* Adjust this value to place the button higher or lower */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001101210120; /* Ensure the button is above the image */
+    padding: 13px 35px;
+    background-color: #20e42000;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .abc[_ngcontent-ng-c786036195][_ngcontent-ng-c786036195] {
+    font-size: 24px;
+    margin: 0px;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001101210120;
+    padding: 13px 35px;
+}
+
+  .top-button2 {
+   
+        position: absolute;
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1001101210120;
+        padding: 13px 35px;
+        background-color: #20e42000;
+        color: #000000;
+        border: none;
+        cursor: pointer;
+        font-size: 70px;
+    
+  }
+  
+  .responsive-image {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure no extra space around the image */
+    z-index: 10014; /* Higher z-index to keep the image on top */
+    position: relative; /* Ensure the image stays above the button */
+  }
+  
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  
+  

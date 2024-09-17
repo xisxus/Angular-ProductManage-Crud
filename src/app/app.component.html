@@ -1,0 +1,22 @@
+
+
+<nav *ngIf="showNav">
+  <ul class="navbar-nav flex-row text-white bg-black">
+    <li ><a class="nav-link m-2 " routerLink="">Home</a></li>
+    <li ><a class="nav-link m-2" routerLink="/view">Product</a></li>
+    <li ><a class="nav-link m-2" routerLink="/view/create">Create</a></li>
+    
+  </ul>
+</nav>
+
+<div class="container">
+  <router-outlet />
+</div>
+
+<div class="footer bg-dark text-white text-center mt-4" *ngIf="showNav">
+  <footer>
+    <p>this is footer</p>
+  </footer>
+</div>
+
+
